@@ -133,12 +133,12 @@ public class GildedRoseTest {
     assertEquals(expectedQuality, item.getQuality());
   }
 
-  /* Tests for the new requirement
+  /* Tests for the new requirement*/
   @Test
   public void testConjuredDecrementQuality() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 20;
-    Item item = new Item("Conjured Mana Cake", 15, inputQuality);
+    Item item = new ConjuredItem("Conjured Mana Cake", 15, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -152,7 +152,7 @@ public class GildedRoseTest {
   public void testConjuredNonZeroQuality() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 0;
-    Item item = new Item("Conjured Mana Cake", 15, inputQuality);
+    Item item = new ConjuredItem("Conjured Mana Cake", 15, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -166,7 +166,7 @@ public class GildedRoseTest {
   public void testConjuredAlternativeNonZeroQuality() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 1;
-    Item item = new Item("Conjured Mana Cake", 15, inputQuality);
+    Item item = new ConjuredItem("Conjured Mana Cake", 15, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -181,7 +181,7 @@ public class GildedRoseTest {
   public void testConjuredQualityWhenSellInZero() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 10;
-    Item item = new Item("Conjured Mana Cake", 0, inputQuality);
+    Item item = new ConjuredItem("Conjured Mana Cake", 0, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -195,7 +195,7 @@ public class GildedRoseTest {
   public void testConjuredAlternativeQualityWhenSellInZero() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 3;
-    Item item = new Item("Conjured Mana Cake", 0, inputQuality);
+    Item item = new ConjuredItem("Conjured Mana Cake", 0, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -204,5 +204,4 @@ public class GildedRoseTest {
 
     assertEquals(expectedQuality, item.getQuality());
   }
-  */
 }
