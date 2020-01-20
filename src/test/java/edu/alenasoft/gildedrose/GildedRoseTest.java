@@ -11,7 +11,7 @@ public class GildedRoseTest {
   public void testNormalItemDecrementQuality() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 20;
-    Item item = new Item("+5 Dexterity Vest", 10, inputQuality);
+    Item item = new DecreaseQualityItem("+5 Dexterity Vest", 10, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -25,7 +25,7 @@ public class GildedRoseTest {
   public void testNormalItemDoubleDecrementQuality() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 20;
-    Item item = new Item("+5 Dexterity Vest", 0, inputQuality);
+    Item item = new DecreaseQualityItem("+5 Dexterity Vest", 0, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -39,7 +39,7 @@ public class GildedRoseTest {
   public void testNormalItemZeroQuality() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 0;
-    Item item = new Item("+5 Dexterity Vest", 0, inputQuality);
+    Item item = new DecreaseQualityItem("+5 Dexterity Vest", 0, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -53,7 +53,7 @@ public class GildedRoseTest {
   public void testItemSufurasLegendary() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 80;
-    Item item = new Item("Sulfuras, Hand of Ragnaros", 15, inputQuality);
+    Item item = new SulfurasItem("Sulfuras, Hand of Ragnaros", 15, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -67,7 +67,7 @@ public class GildedRoseTest {
   public void testItemNoGreaterThan50() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 50;
-    Item item = new Item("Aged Brie", 20, inputQuality);
+    Item item = new IncreaseQualityItem("Aged Brie", 20, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -81,7 +81,7 @@ public class GildedRoseTest {
   public void testbackstageIncrementsQuality() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 20;
-    Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 15, inputQuality);
+    Item item = new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 15, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -95,7 +95,7 @@ public class GildedRoseTest {
   public void testbackstageDoubleIncrementQuality() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 20;
-    Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 10, inputQuality);
+    Item item = new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 10, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -109,7 +109,7 @@ public class GildedRoseTest {
   public void testBackstageTripleIncrementQuality() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 20;
-    Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 5, inputQuality);
+    Item item = new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 5, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();
@@ -123,7 +123,7 @@ public class GildedRoseTest {
   public void testBackstageZeroQuality() {
     GildedRose.items = new ArrayList<>();
     int inputQuality = 20;
-    Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 0, inputQuality);
+    Item item = new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 0, inputQuality);
 
     GildedRose.items.add(item);
     GildedRose.updateQuality();

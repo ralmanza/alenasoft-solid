@@ -6,6 +6,8 @@ public class Item {
   public int sellIn;
   public int quality;
 
+  public Item() {}
+
   public Item(String name, int sellIn, int quality) {
     this.setName(name);
     this.setSellIn(sellIn);
